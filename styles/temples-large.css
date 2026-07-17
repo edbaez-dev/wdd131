@@ -1,43 +1,47 @@
-/* Hide hamburger button on larger screens */
-#menu-button {
-  display: none;
-}
+@media screen and (min-width: 768px) {
 
-/* Header layout for larger view */
-header {
-  padding: 1rem 2rem;
-}
+  /* Hide hamburger button on larger screens */
+  #menu-button {
+    display: none;
+  }
 
-/* Nav always visible, horizontal, using Flex */
-nav#primary-nav {
-  display: flex;
-  position: static;
-  width: auto;
-  background-color: transparent;
-}
+  /* Header layout for larger view */
+  header {
+    padding: 1rem 2rem;
+  }
 
-nav#primary-nav ul {
-  flex-direction: row;
-  width: auto;
-}
+  /* Nav always visible, horizontal, using Flex */
+  nav#primary-nav {
+    display: flex;
+    position: static;
+    width: auto;
+    background-color: transparent;
+  }
 
-nav#primary-nav li {
-  width: auto;
-}
+  nav#primary-nav ul {
+    flex-direction: row;
+    width: auto;
+  }
 
-nav#primary-nav a {
-  padding: 0.5rem 1rem;
-}
+  nav#primary-nav li {
+    width: auto;
+  }
 
-/* Main - wider max-width, 3-column grid for figures */
-main {
-  max-width: 1000px;
-  padding: 2rem;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-}
+  nav#primary-nav a {
+    padding: 0.5rem 1rem;
+  }
 
-main h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  /* Main - wider max-width, 3-column grid for figures */
+  main {
+    max-width: 1000px;
+    padding: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  main h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
 }
