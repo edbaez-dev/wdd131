@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brazil | Country Page</title>
+  <meta name="description" content="A country page featuring key facts and weather information about Brazil.">
+  <meta name="author" content="Eduardo Baez">
+  <link rel="stylesheet" href="styles/place.css">
+  <script src="scripts/place.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <h1>Brazil</h1>
+  </header>
+
+  <main>
+    <section class="hero">
+      <picture>
+        <source media="(min-width: 700px)" srcset="images/brazil-hero-large.webp">
+        <img src="images/brazil-hero-small.webp" alt="Christ the Redeemer statue overlooking Rio de Janeiro, Brazil" loading="lazy">
+      </picture>
+
+      <section class="data-box">
+        <h2>Data</h2>
+        <ul>
+          <li><span class="label">Area:</span> <span class="value">8,510,346 sq km</span></li>
+          <li><span class="label">Population:</span> <span class="value">213,421,037</span></li>
+          <li><span class="label">Capital:</span> <span class="value">Brasília</span></li>
+          <li><span class="label">Languages:</span> <span class="value">Portuguese</span></li>
+          <li><span class="label">Currency:</span> <span class="value">Brazilian Real</span></li>
+          <li><span class="label">Time Zone:</span> <span class="value">UTC-3</span></li>
+          <li><span class="label">Calling Code:</span> <span class="value">+55</span></li>
+          <li><span class="label">Internet TLD:</span> <span class="value">.br</span></li>
+        </ul>
+      </section>
+
+      <section class="weather-box">
+        <h2>Weather</h2>
+        <img src="images/weather-icon.svg" alt="Partly cloudy weather icon" class="weather-icon-mobile">
+        <ul>
+          <li><span class="label">Temperature:</span> <span class="value">8 &deg;C</span></li>
+          <li><span class="label">Conditions:</span> <span class="value">Partly Cloudy</span></li>
+          <li><span class="label">Wind:</span> <span class="value">15 km/h</span></li>
+          <li><span class="label">Wind Chill:</span> <span class="value" id="wind-chill">N/A</span></li>
+        </ul>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Eduardo Baez | Brazil</p>
+    <p>Last Modification: <span id="last-modified"></span></p>
+  </footer>
+
+</body>
+</html>

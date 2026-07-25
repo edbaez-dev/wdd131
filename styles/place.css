@@ -1,0 +1,174 @@
+/* ===== CSS Variables ===== */
+:root {
+  --color-primary: #009739;
+  --color-secondary: #FEDD00;
+  --color-accent: #012169;
+  --color-bg: #ffffff;
+  --color-text: #1a1a1a;
+  --color-box-bg: rgba(255, 255, 255, 0.92);
+  --font-heading: "Poppins", sans-serif;
+  --font-body: "Roboto", sans-serif;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+}
+
+/* ===== Reset / Base ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  min-height: 0;
+}
+
+/* ===== Header ===== */
+header {
+  background-color: var(--color-primary);
+  color: #fff;
+  text-align: center;
+  padding: var(--spacing-md);
+}
+
+header h1 {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+
+/* ===== Hero Section (mobile-first: stacked) ===== */
+.hero {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.hero picture,
+.hero img {
+  width: 100%;
+  display: block;
+}
+
+.data-box,
+.weather-box {
+  background-color: var(--color-box-bg);
+  padding: var(--spacing-md);
+  border-bottom: 3px solid var(--color-secondary);
+}
+
+.data-box h2,
+.weather-box h2 {
+  font-family: var(--font-heading);
+  color: var(--color-accent);
+  margin-bottom: var(--spacing-sm);
+}
+
+.data-box ul,
+.weather-box ul {
+  list-style: none;
+}
+
+.data-box li,
+.weather-box li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.25rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.label {
+  font-weight: bold;
+  color: var(--color-accent);
+}
+
+/* Weather icon - mobile (SVG) visible by default */
+.weather-box .weather-icon-mobile {
+  display: block;
+  width: 48px;
+  height: 48px;
+  margin: 0 auto var(--spacing-sm);
+}
+
+/* Pseudo-element icon hidden on mobile, shown only on wide view */
+.weather-box h2::after {
+  content: "";
+  display: none;
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: var(--color-accent);
+  color: #fff;
+  text-align: center;
+  padding: var(--spacing-md);
+  font-size: 0.9rem;
+}
+
+/* ===== Media Query: Wide View (Desktop/Tablet) ===== */
+@media (min-width: 700px) {
+  .hero {
+    position: relative;
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .hero picture {
+    position: absolute;
+    inset: 0;
+    display: block;
+  }
+
+  .hero picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .data-box,
+  .weather-box {
+    position: absolute;
+    width: 260px;
+    border-bottom: none;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .data-box {
+    top: var(--spacing-lg);
+    left: var(--spacing-lg);
+  }
+
+  .weather-box {
+    bottom: var(--spacing-lg);
+    right: var(--spacing-lg);
+  }
+
+  /* Hide SVG icon on wide view */
+  .weather-box .weather-icon-mobile {
+    display: none;
+  }
+
+  /* Show pseudo-element emoticon instead, after the "Weather" heading */
+  .weather-box h2::after {
+    content: "⛅";
+    display: inline-block;
+    margin-left: var(--spacing-sm);
+    font-size: 1.2rem;
+  }
+}
