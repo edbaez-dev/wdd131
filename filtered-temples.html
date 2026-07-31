@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filtered Temple Album</title>
+  <meta name="description" content="A responsive, filterable picture album showcasing temples from around the world, built with HTML, CSS, and JavaScript.">
+  <meta name="author" content="Eduardo Baez">
+
+  <link rel="stylesheet" href="styles/filtered-temples.css">
+  <link rel="stylesheet" href="styles/filtered-temples-large.css" media="screen and (min-width: 768px)">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+  <script src="scripts/filtered-temples.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <p class="site-title">Temple Album</p>
+    <button id="menu-button" aria-label="Toggle navigation menu">&#9776;</button>
+    <nav id="primary-nav">
+      <ul>
+        <li><a href="#" id="home">Home</a></li>
+        <li><a href="#" id="old">Old</a></li>
+        <li><a href="#" id="new">New</a></li>
+        <li><a href="#" id="large">Large</a></li>
+        <li><a href="#" id="small">Small</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Home</h1>
+
+    <div id="temple-cards"></div>
+
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Eduardo Baez</p>
+    <p><span id="last-modified"></span></p>
+  </footer>
+
+</body>
+</html>
