@@ -1,7 +1,7 @@
 const products = [
   {
     id: "fc-1888",
-    name: "flux capacitor",
+    name: "Flux capacitor",
     averagerating: 4.5,
   },
   {
