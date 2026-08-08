@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Odyssey Fitness</title>
+  <meta name="description" content="Odyssey Fitness is a full-service gym offering group classes, flexible memberships, and complete training facilities.">
+  <meta name="author" content="Eduardo Baez">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Oswald:wght@500;700&display=optional">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Oswald:wght@500;700&display=optional" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Oswald:wght@500;700&display=optional">
+  </noscript>
+
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="scripts/main.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <p class="site-title">Odyssey Fitness</p>
+    <button id="menu-button" aria-label="Toggle navigation menu">&#9776;</button>
+    <nav id="primary-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="classes.html">Classes &amp; Schedule</a></li>
+        <li><a href="membership.html">Membership</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="hero">
+      <img
+        src="images/hero-gym.jpg"
+        srcset="images/hero-gym-small.jpg 600w, images/hero-gym.jpg 1000w"
+        sizes="(max-width: 767px) 100vw, 1000px"
+        alt="Odyssey Fitness gym floor"
+        width="1000" height="500">
+      <h1>Start Your Fitness Odyssey</h1>
+      <p>Real training. Real results. Join Odyssey Fitness today.</p>
+      <a href="membership.html" class="cta-button">View Membership Plans</a>
+    </section>
+
+    <section id="about">
+      <h2>About Odyssey Fitness</h2>
+      <p>Odyssey Fitness provides information about gym memberships, class schedules, and trainer profiles to help visitors choose the right fitness plan and start their fitness journey. Whether you are lifting weights, joining a group class, or working with a trainer, every visit is a step forward on your personal odyssey.</p>
+    </section>
+
+    <section id="highlights">
+      <h2>What We Offer</h2>
+
+      <article class="highlight-card">
+        <img src="images/highlight-classes.jpg" alt="Group fitness class in session" loading="lazy" width="400" height="300">
+        <h3>Group Classes</h3>
+        <p>From Yoga to CrossFit Bootcamp, join a variety of group classes led by experienced instructors.</p>
+        <a href="classes.html">View Class Schedule</a>
+      </article>
+
+      <article class="highlight-card">
+        <img src="images/highlight-membership.jpg" alt="Gym member checking in at the front desk" loading="lazy" width="400" height="300">
+        <h3>Flexible Membership</h3>
+        <p>Choose from Basic, Standard, or Premium plans to match your fitness goals and budget.</p>
+        <a href="membership.html">See Membership Plans</a>
+      </article>
+
+      <article class="highlight-card">
+        <img src="images/highlight-facilities.jpg" alt="Gym facility with weights and cardio equipment" loading="lazy" width="400" height="300">
+        <h3>Complete Facilities</h3>
+        <p>Our gym floor features free weights, resistance machines, cardio equipment, and a dedicated functional training area — everything you need for a complete workout.</p>
+      </article>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Eduardo Baez</p>
+    <p><span id="last-modified"></span></p>
+    <p><a href="references.html">References</a></p>
+  </footer>
+
+</body>
+</html>
